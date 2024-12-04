@@ -38,13 +38,16 @@ def print_greeting():
 
 def check_letter(letter):
     vowels = {"a", "e", "i", "o", "u"}
-    if letter.lower() in vowels:
-        print(f"The letter '{letter}' is a vowel")
+    if len(letter) == 1 and letter.isalpha():
+        if letter.lower() in vowels:
+           print(f"The letter '{letter}' is a vowel")
+        else:
+            print(f"The letter {letter}' is a consonant.")
     else:
-        print(f"The letter {letter}' is a consonant.")
+        print("Invalid input. Please enter a single alphabetic character.")
 
 # Call the function
-# check_letter("Z")
+check_letter("1")
 
 
 # Exercise 2: Old enough to vote?
